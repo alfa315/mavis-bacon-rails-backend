@@ -1,4 +1,4 @@
-class Api::V1::GamesController < ApplicationController
+class Api::V1::UsersController < ApplicationController
 
   def index
    @users = User.all
@@ -14,15 +14,9 @@ class Api::V1::GamesController < ApplicationController
     end
   end
 
-  def update
+  def show
     @user = User.find(params[:id])
-
-    @user.update(user_params)
-    if @user.save
-     render json: @user
-    else
-     render json: {errors: @user.errors.full_messages}, status: 422
-    end
+    render json: @user
   end
 
   private
