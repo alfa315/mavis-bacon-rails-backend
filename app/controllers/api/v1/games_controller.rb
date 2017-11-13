@@ -1,8 +1,8 @@
 class Api::V1::GamesController < ApplicationController
 
   def index
-   @games = Game.all
-   render json: @games
+    @games = Game.all
+    render json: @games
   end
 
   def show
@@ -11,17 +11,19 @@ class Api::V1::GamesController < ApplicationController
   end
 
   def create
-    @game = Game.new(game_params)
+    puts params
+    @game = Game.new(params)
     if @game.save
       render json: @game
     else
-      render json: {error: @game.errors.full_message}, status: 422
+      render json: {error: @game.errors.full_messages}, status: 422
     end
   end
 
   private
-  def game_params
-   params.require(:game).permit(:user_id, :wpm, :game_won)
-  end
+
+  # def game_params
+  #   params.permit(:user_id, :wpm, :game_won)
+  # end
 
 end
