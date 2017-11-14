@@ -11,8 +11,7 @@ class Api::V1::GamesController < ApplicationController
   end
 
   def create
-    puts params
-    @game = Game.new(params)
+    @game = Game.new(game_params)
     if @game.save
       render json: @game
     else
@@ -22,8 +21,8 @@ class Api::V1::GamesController < ApplicationController
 
   private
 
-  # def game_params
-  #   params.permit(:user_id, :wpm, :game_won)
-  # end
+  def game_params
+    params.permit(:user_id, :wpm, :game_won)
+  end
 
 end

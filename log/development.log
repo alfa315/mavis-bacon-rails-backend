@@ -2023,3 +2023,96 @@ Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
 ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
   
 app/controllers/api/v1/games_controller.rb:15:in `create'
+Started POST "/api/v1/users" for 127.0.0.1 at 2017-11-13 20:44:47 -0500
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"jonopens", "user"=>{"username"=>"jonopens"}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "jonopens"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers]   [1m[36mGame Load (0.5ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."user_id" = $1[0m  [["user_id", 4]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (9.92ms)
+Completed 200 OK in 46ms (Views: 30.8ms | ActiveRecord: 12.5ms)
+
+
+Started POST "/api/v1/games" for 127.0.0.1 at 2017-11-13 20:44:56 -0500
+Processing by Api::V1::GamesController#create as JSON
+  Parameters: {"wpm"=>"33.333333333333336", "game_won"=>"false", "user_id"=>"4", "game"=>{"user_id"=>"4", "wpm"=>"33.333333333333336", "game_won"=>"false"}}
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 3.3ms)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/api/v1/games_controller.rb:15:in `create'
+Started POST "/api/v1/users" for 127.0.0.1 at 2017-11-13 20:45:42 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"jonopens", "user"=>{"username"=>"jonopens"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "jonopens"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers]   [1m[36mGame Load (0.6ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."user_id" = $1[0m  [["user_id", 4]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (3.02ms)
+Completed 200 OK in 10ms (Views: 3.6ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/api/v1/games" for 127.0.0.1 at 2017-11-13 20:46:08 -0500
+Processing by Api::V1::GamesController#create as JSON
+  Parameters: {"wpm"=>"23.076923076923077", "game_won"=>"false", "user_id"=>"4", "game"=>{"user_id"=>"4", "wpm"=>"23.076923076923077", "game_won"=>"false"}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/api/v1/games_controller.rb:15:in `create'
+Started POST "/api/v1/users" for 127.0.0.1 at 2017-11-13 20:46:21 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"jonopens", "user"=>{"username"=>"jonopens"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "jonopens"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers]   [1m[36mGame Load (0.5ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."user_id" = $1[0m  [["user_id", 4]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (3.38ms)
+Completed 200 OK in 9ms (Views: 3.8ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/api/v1/games" for 127.0.0.1 at 2017-11-13 20:46:55 -0500
+Processing by Api::V1::GamesController#create as JSON
+  Parameters: {"wpm"=>"67.05882352941177", "game_won"=>"false", "user_id"=>"4", "game"=>{"user_id"=>"4", "wpm"=>"67.05882352941177", "game_won"=>"false"}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/api/v1/games_controller.rb:15:in `create'
+  [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT  "games".* FROM "games" LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/api/v1/users" for 127.0.0.1 at 2017-11-13 20:51:07 -0500
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"jonopens", "user"=>{"username"=>"jonopens"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "jonopens"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers]   [1m[36mGame Load (0.9ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."user_id" = $1[0m  [["user_id", 4]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (9.18ms)
+Completed 200 OK in 37ms (Views: 20.8ms | ActiveRecord: 10.7ms)
+
+
+Started POST "/api/v1/games" for 127.0.0.1 at 2017-11-13 20:51:17 -0500
+Processing by Api::V1::GamesController#create as JSON
+  Parameters: {"wpm"=>"73.33333333333334", "game_won"=>"false", "user_id"=>"4", "game"=>{"user_id"=>"4", "wpm"=>"73.33333333333334", "game_won"=>"false"}}
+Unpermitted parameter: :game
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (2.6ms)[0m  [1m[32mINSERT INTO "games" ("user_id", "wpm", "game_won") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", 4], ["wpm", 73], ["game_won", "f"]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered GameSerializer with ActiveModelSerializers::Adapter::Attributes (2.0ms)
+Completed 200 OK in 25ms (Views: 3.8ms | ActiveRecord: 8.3ms)
+
+
+  [1m[36mGame Load (0.9ms)[0m  [1m[34mSELECT  "games".* FROM "games" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mGame Load (0.7ms)[0m  [1m[34mSELECT  "games".* FROM "games" ORDER BY "games"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
