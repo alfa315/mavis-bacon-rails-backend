@@ -1,24 +1,5 @@
-# README
+# Marvis Bacon Backend (renamed from Mavis Bacon)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Sister repo to [Marvis Bacon Frontend](https://github.com/alfa315/mavis-bacon-frontend). 
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Goal was to try and make a loose approximation of the old typing & teaching game Mavis Beacon, specifically the racing game.
